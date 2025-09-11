@@ -4,7 +4,7 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # ---------------- CONFIG ----------------
-BOT_TOKEN = "8444692351:AAHxZFibqlyKStPCemPCnaQQX-AnWsS3GMM"
+BOT_TOKEN = "##############" # Replace with your telegram bot token
 PASSWORD = "kmrl2025"
 
 # ---------------- DATA LOADER ----------------
@@ -198,3 +198,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
