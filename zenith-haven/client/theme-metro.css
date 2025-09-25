@@ -1,0 +1,34 @@
+@layer base {
+  :root {
+    --metro-blue: 202 94% 46%;
+    --metro-orange: 28 96% 53%;
+    --metro-green: 158 64% 45%;
+    --metro-purple: 259 89% 66%;
+    --glass-border: 0 0% 100% / 0.12;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-metro {
+    background-image: linear-gradient(135deg, hsl(var(--metro-blue)) 0%, hsl(var(--metro-green)) 45%, hsl(var(--metro-purple)) 100%);
+  }
+  .code-bg {
+    background: radial-gradient(1200px 400px at 50% -20%, hsl(var(--metro-blue) / 0.08), transparent),
+      radial-gradient(900px 300px at 100% 20%, hsl(var(--metro-purple) / 0.06), transparent),
+      radial-gradient(800px 300px at 0% 80%, hsl(var(--metro-green) / 0.06), transparent);
+  }
+  .shadow-glow-blue { box-shadow: 0 0 0 1px hsl(var(--metro-blue) / 0.25), 0 8px 24px hsl(var(--metro-blue) / 0.25); }
+  .shadow-glow-orange { box-shadow: 0 0 0 1px hsl(var(--metro-orange) / 0.25), 0 8px 24px hsl(var(--metro-orange) / 0.25); }
+  .shadow-glow-green { box-shadow: 0 0 0 1px hsl(var(--metro-green) / 0.25), 0 8px 24px hsl(var(--metro-green) / 0.25); }
+  .border-glass-border { border-color: hsl(var(--glass-border)); }
+  .text-metro-blue { color: hsl(var(--metro-blue)); }
+  .text-metro-orange { color: hsl(var(--metro-orange)); }
+  .text-metro-green { color: hsl(var(--metro-green)); }
+  .text-metro-purple { color: hsl(var(--metro-purple)); }
+
+  @keyframes pulseGlow {
+    0%, 100% { text-shadow: 0 0 0 rgba(0,0,0,0); filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
+    50% { text-shadow: 0 0 24px hsl(var(--metro-blue) / 0.35); filter: drop-shadow(0 0 18px hsl(var(--metro-blue) / 0.35)); }
+  }
+  .animate-pulse-glow { animation: pulseGlow 2.2s ease-in-out infinite; }
+}
